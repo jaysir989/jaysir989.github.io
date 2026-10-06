@@ -139,6 +139,8 @@ p {
     font-weight: bold;
     text-align: center;
 }
+aside { pointer-events: none; }
+aside * { pointer-events: auto; }
 }
 
 
