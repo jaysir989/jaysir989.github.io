@@ -1,3 +1,14 @@
+main {
+  position: relative;
+  z-index: 10; /* Ensures main content sits above background elements */
+}
+
+/* Ensure buttons have high stacking order */
+button, a {
+  position: relative;
+  z-index: 20;
+  cursor: pointer;
+}
 .music-title {
     font-size: 13px;
     font-weight: 600;
@@ -24,6 +35,25 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+}
+
+    /* Prevent the invisible music sidebar overlay from blocking clicks on the page */
+aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  pointer-events: none; /* Allows clicks to pass through transparent areas */
+}
+
+/* Re-enable clicking for actual interactive elements inside the music player */
+aside button,
+aside .song-item,
+aside .player-card {
+  pointer-events: auto; /* Makes actual buttons clickable again */
+}
 }
 
 .music-track-info {
