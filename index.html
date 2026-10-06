@@ -328,7 +328,7 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;opacity:.035;b
     <button class="play-btn" id="playButton" type="button" aria-label="Play selected song">▶</button>
     <div class="seek-wrap"><input class="seek" id="seekBar" type="range" min="0" max="100" value="0" aria-label="Song progress"><div class="time-row"><span id="currentTime">0:00</span><span id="durationTime">0:00</span></div></div>
   </div>
-  <audio id="musicPlayer" preload="metadata"></audio>
+ <audio id="bg-music" src="your-song-file.mp3" preload="metadata" loop></audio>
   <div class="music-list" id="musicList">
     <button class="track-row" type="button" data-src="music/Kursunada.mp3" data-name="Kursunada" data-artist="Adie" data-art="☾">
       <span class="track-number">01</span><span class="track-info"><span class="track-name">Kursunada</span><span class="track-artist">Adie</span></span><span class="track-icon">♡</span>
